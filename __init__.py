@@ -1,3 +1,13 @@
-from .unloadModel import NODE_CLASS_MAPPINGS
+from .nodes import UnloadModelNode, UnloadAllModelsNode
 
-__all__ = ['NODE_CLASS_MAPPINGS']
+NODE_CLASS_MAPPINGS = {
+    "UnloadModel": UnloadModelNode,
+    "UnloadAllModels": UnloadAllModelsNode,
+}
+
+NODE_DISPLAY_NAME_MAPPINGS = {
+    "UnloadModel": "Unload Model",
+    "UnloadAllModels": "Unload All Models",
+}
+
+__version__ = "1.0.0"
