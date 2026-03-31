@@ -40,7 +40,7 @@ class UnloadModelNode:
     OUTPUT_TOOLTIPS = ("Persist any data throughout the memory cleanup process e.g. latents, conditioning, images, masks, and other metadata.",) * 7
     FUNCTION = "route"
     CATEGORY = "Free Memory"
-    DESCRIPTION = "Unload a model and release its associated VRAM/RAM usage at any point in the workflow. Optionally persist any data through to the next node."
+    DESCRIPTION = "Unload a model and release its associated VRAM/RAM usage at any point in the workflow. Optionally persist/route any data through to the next node."
     
     def route(self, synchronize_cuda: bool, model=None, persist_any_1=None, persist_any_2=None, persist_any_3=None, persist_any_4=None, persist_any_5=None, persist_any_6=None, persist_any_7=None):
         print("### UnloadModelNode • Model VRAM/RAM cleanup ###")
@@ -147,7 +147,7 @@ class UnloadAllModelsNode:
     OUTPUT_TOOLTIPS = ("Persist any data throughout the memory cleanup process e.g. latents, conditioning, images, masks, and other metadata.",) * 7
     FUNCTION = "route"
     CATEGORY = "Free Memory"
-    DESCRIPTION = "Unload all models and release all associated VRAM/RAM usage at any point in the workflow. Optionally persist any data through to the next node."
+    DESCRIPTION = "Unload all models and release all associated VRAM/RAM usage at any point in the workflow. Optionally persist/route any data through to the next node."
 
     def route(self, synchronize_cuda: bool, persist_any_1=None, persist_any_2=None, persist_any_3=None, persist_any_4=None, persist_any_5=None, persist_any_6=None, persist_any_7=None):
         print("### UnloadAllModelsNode • Full VRAM/RAM cleanup ###")
